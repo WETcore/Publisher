@@ -22,7 +22,7 @@ class HomePageViewModel : ViewModel() {
         db.collection(collectionPath).addSnapshotListener { value, error ->
             _article.value = value?.toObjects(Article::class.java) ?: mutableListOf()
         }
-        Log.d("db","${Article().title}")
+//        Log.d("db","${Article().title}")
     }
 
     init {

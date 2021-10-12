@@ -10,7 +10,7 @@ import com.aqua.publisher.databinding.ArticleItemBinding
 
 class ArticleAdapter(): ListAdapter<Article, ArticleAdapter.ArticleViewHolder>(DiffCallback) {
 
-    class ArticleViewHolder(private var binding: ArticleItemBinding) :
+    class ArticleViewHolder(var binding: ArticleItemBinding) :
         RecyclerView.ViewHolder(binding.root) {
         fun bind(article: Article) {
             binding.article = article
@@ -37,8 +37,9 @@ class ArticleAdapter(): ListAdapter<Article, ArticleAdapter.ArticleViewHolder>(D
     }
 
     override fun onBindViewHolder(holder: ArticleViewHolder, position: Int) {
-        val product = getItem(position)
-        holder.bind(product)
+        val article = getItem(position)
+        holder.binding.authorName.text = article.author.get("name")
+        holder.bind(article)
     }
 
 }

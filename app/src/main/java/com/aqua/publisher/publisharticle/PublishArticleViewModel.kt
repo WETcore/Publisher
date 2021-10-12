@@ -2,8 +2,6 @@ package com.aqua.publisher.publisharticle
 
 import androidx.lifecycle.ViewModel
 import com.aqua.publisher.database.Article
-import com.aqua.publisher.database.Author
-import com.aqua.publisher.database.Data
 import com.google.firebase.firestore.FirebaseFirestore
 import java.util.*
 

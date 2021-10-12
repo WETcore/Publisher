@@ -5,12 +5,12 @@
         <variable
             name="article"
             type="com.aqua.publisher.database.Article" />
-        <variable
-            name="data"
-            type="com.aqua.publisher.database.Data" />
-        <variable
-            name="author"
-            type="com.aqua.publisher.database.Author" />
+<!--        <variable-->
+<!--            name="data"-->
+<!--            type="com.aqua.publisher.database.Data" />-->
+<!--        <variable-->
+<!--            name="author"-->
+<!--            type="com.aqua.publisher.database.Author" />-->
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -35,7 +35,6 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="16dp"
-            android:text="@{author.name}"
             app:layout_constraintStart_toStartOf="@+id/article_title"
             app:layout_constraintTop_toBottomOf="@+id/article_title"
             tools:text="NAME" />

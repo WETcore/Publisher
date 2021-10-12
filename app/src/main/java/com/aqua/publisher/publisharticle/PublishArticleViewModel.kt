@@ -11,13 +11,10 @@ class PublishArticleViewModel : ViewModel() {
 
     // article data
     var article = Article()
-    // TODO
-//    var data = article.data
-//    var author = data
-
 
     val articles = FirebaseFirestore.getInstance().collection("articles")
     val document = articles.document()
+
     val data = hashMapOf(
         "author" to hashMapOf(
             "email" to "wayne@school.appworks.tw",
@@ -31,7 +28,6 @@ class PublishArticleViewModel : ViewModel() {
         "createdTime" to Calendar.getInstance()
             .timeInMillis, "id" to document.id, "category" to "Beauty"
     )
-
     fun addData() {
         document.set(data)
     }

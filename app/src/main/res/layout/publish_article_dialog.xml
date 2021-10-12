@@ -1,0 +1,65 @@
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".publisharticle.PublishArticleDialog">
+
+    <data>
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <EditText
+            android:id="@+id/input_title"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="16dp"
+            android:ems="10"
+            android:hint="input title"
+            android:inputType="textPersonName"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <EditText
+            android:id="@+id/input_cateogry"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:ems="10"
+            android:hint="input category"
+            android:inputType="textPersonName"
+            app:layout_constraintEnd_toEndOf="@+id/input_title"
+            app:layout_constraintStart_toStartOf="@+id/input_title"
+            app:layout_constraintTop_toBottomOf="@+id/input_title" />
+
+        <EditText
+            android:id="@+id/input_content"
+            android:layout_width="0dp"
+            android:layout_height="100dp"
+            android:layout_marginTop="16dp"
+            android:ems="10"
+            android:hint="input content"
+            android:inputType="textPersonName"
+            app:layout_constraintEnd_toEndOf="@+id/input_cateogry"
+            app:layout_constraintStart_toStartOf="@+id/input_cateogry"
+            app:layout_constraintTop_toBottomOf="@+id/input_cateogry" />
+
+        <Button
+            android:id="@+id/button"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="16dp"
+            android:text="Button"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@+id/input_content"
+            app:layout_constraintStart_toStartOf="@+id/input_content"
+            app:layout_constraintTop_toBottomOf="@+id/input_content" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

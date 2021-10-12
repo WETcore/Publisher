@@ -7,13 +7,13 @@
 
     <fragment
         android:id="@+id/homePageFragment"
-        android:name="com.aqua.publisher.HomePageFragment"
+        android:name="com.aqua.publisher.homepage.HomePageFragment"
         android:label="home_page_fragment"
         tools:layout="@layout/home_page_fragment" />
 
     <fragment
         android:id="@+id/publishArticleFragment"
-        android:name="com.aqua.publisher.PublishArticleFragment"
+        android:name="com.aqua.publisher.publisharticle.PublishArticleFragment"
         android:label="publish_article_fragment"
         tools:layout="@layout/publish_article_fragment" />
 

@@ -1,4 +1,4 @@
-package com.aqua.publisher
+package com.aqua.publisher.publisharticle
 
 import androidx.lifecycle.ViewModel
 

@@ -11,13 +11,3 @@ data class Article(
     var id: String = "",
     var category: String = "",
 )
-
-//data class Data(
-//    var author: List<Author> = listOf(),
-//)
-//
-//data class Author(
-//    var email: String = "",
-//    var id: String = "",
-//    var name: String = "",
-//)

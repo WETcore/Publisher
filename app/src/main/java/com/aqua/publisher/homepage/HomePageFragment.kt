@@ -27,11 +27,6 @@ class HomePageFragment : Fragment() {
         val binding: HomePageFragmentBinding =
             DataBindingUtil.inflate(inflater, R.layout.home_page_fragment, container,false)
 
-        // get firebase data
-        viewModel.getFirebaseData()
-
-        // set UI value
-
         // recycler
         val adapter = ArticleAdapter()
         binding.recycler.adapter = adapter
@@ -43,8 +38,8 @@ class HomePageFragment : Fragment() {
 
         // swipe
         binding.swipe.setOnRefreshListener {
-            binding.swipe.isRefreshing = false
             viewModel.getFirebaseData()
+            binding.swipe.isRefreshing = false
         }
 
         return binding.root

@@ -41,6 +41,12 @@ class HomePageFragment : Fragment() {
             adapter.submitList(it)
         }
 
+        // swipe
+        binding.swipe.setOnRefreshListener {
+            binding.swipe.isRefreshing = false
+            viewModel.getFirebaseData()
+        }
+
         return binding.root
     }
 }

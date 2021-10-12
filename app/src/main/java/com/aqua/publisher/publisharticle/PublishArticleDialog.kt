@@ -9,6 +9,7 @@ import android.widget.Toast
 import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.DialogFragment
 import androidx.lifecycle.ViewModelProvider
+import androidx.navigation.fragment.findNavController
 import com.aqua.publisher.R
 import com.aqua.publisher.database.Article
 import com.aqua.publisher.databinding.PublishArticleDialogBinding
@@ -53,6 +54,7 @@ class PublishArticleDialog : DialogFragment() {
                         ) {
                     Toast.makeText(requireContext(),"No author info.", Toast.LENGTH_SHORT).show()
                 } else {
+                    findNavController().popBackStack()
                     viewModel.db.collection(collectionPath).add(viewModel.article)
                 }
             }

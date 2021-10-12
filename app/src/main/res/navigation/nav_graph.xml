@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/homePageFragment">
+
+    <fragment
+        android:id="@+id/homePageFragment"
+        android:name="com.aqua.publisher.HomePageFragment"
+        android:label="home_page_fragment"
+        tools:layout="@layout/home_page_fragment" />
+
+    <fragment
+        android:id="@+id/publishArticleFragment"
+        android:name="com.aqua.publisher.PublishArticleFragment"
+        android:label="publish_article_fragment"
+        tools:layout="@layout/publish_article_fragment" />
+
+    <action android:id="@+id/nav_to_publishArticle" app:destination="@id/publishArticleFragment"
+        app:popUpTo="@id/publishArticleFragment"
+        app:popUpToInclusive="true" />
+
+</navigation>

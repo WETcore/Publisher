@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "771472225960",
+    "project_id": "midtermpublisher-a390c",
+    "storage_bucket": "midtermpublisher-a390c.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:771472225960:android:25012f4f0f4c0563c5f49d",
+        "android_client_info": {
+          "package_name": "com.aqua.publisher"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "771472225960-kdf21tce1v3ddjuus88kc4icki9ov0bk.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBrLpKIbVJUOAmJgGkSxn1nVnwmPTLkuE4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "771472225960-kdf21tce1v3ddjuus88kc4icki9ov0bk.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

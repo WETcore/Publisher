@@ -11,14 +11,14 @@
         android:label="home_page_fragment"
         tools:layout="@layout/home_page_fragment" />
 
-    <fragment
-        android:id="@+id/publishArticleFragment"
-        android:name="com.aqua.publisher.publisharticle.PublishArticleFragment"
-        android:label="publish_article_fragment"
-        tools:layout="@layout/publish_article_fragment" />
+    <dialog
+        android:id="@+id/publishArticleDialog"
+        android:name="com.aqua.publisher.publisharticle.PublishArticleDialog"
+        android:label="publish_article_dialog"
+        tools:layout="@layout/publish_article_dialog" />
 
-    <action android:id="@+id/nav_to_publishArticle" app:destination="@id/publishArticleFragment"
-        app:popUpTo="@id/publishArticleFragment"
+    <action android:id="@+id/nav_to_publishArticle" app:destination="@id/publishArticleDialog"
+        app:popUpTo="@id/publishArticleDialog"
         app:popUpToInclusive="true" />
 
 </navigation>

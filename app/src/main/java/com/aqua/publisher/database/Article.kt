@@ -1,20 +1,20 @@
 package com.aqua.publisher.database
 
 data class Article(
-    val data: List<Data>,
-    val title: String,
-    val content: String,
-    val createdTime: String,
-    val id: String,
-    val category: String,
+    var data: List<Data> = listOf(),
+    var title: String = "Title",
+    var content: String = "",
+    var createdTime: Long = 0L,
+    var id: String = "",
+    var category: String = "",
 )
 
 data class Data(
-    val author: List<Author>,
+    var author: List<Author> = listOf(),
 )
 
 data class Author(
-    val email: String,
-    val id: String,
-    val name: String,
+    var email: String = "",
+    var id: String = "",
+    var name: String = "",
 )

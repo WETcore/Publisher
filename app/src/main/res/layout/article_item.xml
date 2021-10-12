@@ -5,6 +5,12 @@
         <variable
             name="article"
             type="com.aqua.publisher.database.Article" />
+        <variable
+            name="data"
+            type="com.aqua.publisher.database.Data" />
+        <variable
+            name="author"
+            type="com.aqua.publisher.database.Author" />
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -18,36 +24,40 @@
             android:layout_marginStart="16dp"
             android:layout_marginTop="16dp"
             android:layout_marginEnd="16dp"
-            android:text="Title"
+            android:text="@{article.title}"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="TITLE" />
 
         <TextView
             android:id="@+id/author_name"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="16dp"
-            android:text="Name"
+            android:text="@{author.name}"
             app:layout_constraintStart_toStartOf="@+id/article_title"
-            app:layout_constraintTop_toBottomOf="@+id/article_title" />
+            app:layout_constraintTop_toBottomOf="@+id/article_title"
+            tools:text="NAME" />
 
         <TextView
             android:id="@+id/created_time"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="16dp"
-            android:text="Time"
+            android:text="@{String.valueOf(article.createdTime)}"
             app:layout_constraintStart_toStartOf="@+id/author_name"
-            app:layout_constraintTop_toBottomOf="@+id/author_name" />
+            app:layout_constraintTop_toBottomOf="@+id/author_name"
+            tools:text="TIME" />
 
         <TextView
             android:id="@+id/category"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Category"
+            android:text="@{article.category}"
             app:layout_constraintBottom_toBottomOf="@+id/author_name"
-            app:layout_constraintEnd_toEndOf="@+id/article_title" />
+            app:layout_constraintEnd_toEndOf="@+id/article_title"
+            tools:text="CATA" />
 
         <TextView
             android:id="@+id/article_content"
@@ -55,10 +65,11 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="16dp"
             android:layout_marginBottom="16dp"
-            android:text="Content"
+            android:text="@{article.content}"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="@+id/category"
             app:layout_constraintStart_toStartOf="@+id/created_time"
-            app:layout_constraintTop_toBottomOf="@+id/created_time" />
+            app:layout_constraintTop_toBottomOf="@+id/created_time"
+            tools:text="CONTENT" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>

@@ -7,6 +7,7 @@ import com.aqua.publisher.database.Article
 import com.aqua.publisher.database.ArticleRepository
 import com.aqua.publisher.publisharticle.collectionPath
 import com.google.firebase.firestore.FirebaseFirestore
+import com.google.firebase.firestore.Query
 
 object ArticleRemoteDataSource: ArticleRepository {
 
@@ -14,7 +15,7 @@ object ArticleRemoteDataSource: ArticleRepository {
         val db = FirebaseFirestore.getInstance()
         val result = MutableLiveData<List<Article>>()
         result.let {
-            db.collection(collectionPath).addSnapshotListener { value, error ->
+            db.collection(collectionPath).orderBy("createdTime", Query.Direction.DESCENDING).addSnapshotListener { value, error ->
                 it.value = value?.toObjects(Article::class.java) ?: mutableListOf()
             }
         }

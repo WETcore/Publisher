@@ -35,7 +35,6 @@ class PublishArticleDialog : DialogFragment() {
         val binding: PublishArticleDialogBinding =
             DataBindingUtil.inflate(inflater, R.layout.publish_article_dialog, container,false)
 
-
         binding.apply {
             button.setOnClickListener {
                 viewModel.article.apply {
@@ -60,12 +59,7 @@ class PublishArticleDialog : DialogFragment() {
             }
         }
 
-
-
-
-
         return binding.root
     }
-
 
 }

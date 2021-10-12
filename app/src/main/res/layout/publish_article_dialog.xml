@@ -56,6 +56,8 @@
             android:layout_marginTop="4dp"
             android:layout_marginBottom="4dp"
             android:text="Button"
+            android:textColor="@color/white"
+            android:background="@color/teal_200"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="@+id/input_content"
             app:layout_constraintStart_toStartOf="@+id/input_content"

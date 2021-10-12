@@ -5,6 +5,7 @@ import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Toast
 import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.DialogFragment
 import androidx.lifecycle.ViewModelProvider
@@ -46,13 +47,14 @@ class PublishArticleDialog : DialogFragment() {
                     createdTime = Calendar.getInstance().timeInMillis
                     id = viewModel.document.id
                 }
-
-                // TODO
-//                viewModel.article.data = "Aqua"
-//                viewModel.author.email = "test@gmail.com"
-
-//                viewModel.db.collection(collectionPath).add(viewModel.article)
-                viewModel.db.collection(collectionPath).add(viewModel.article)
+                if (viewModel.article.author["name"].isNullOrEmpty() ||
+                    viewModel.article.author["email"].isNullOrEmpty() ||
+                    viewModel.article.author["id"].isNullOrEmpty()
+                        ) {
+                    Toast.makeText(requireContext(),"No author info.", Toast.LENGTH_SHORT).show()
+                } else {
+                    viewModel.db.collection(collectionPath).add(viewModel.article)
+                }
             }
         }
 
